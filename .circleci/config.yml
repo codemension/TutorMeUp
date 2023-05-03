@@ -3,10 +3,10 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 
-app-dir: client
 
 jobs:
   test-client:
+    working_directory: ~/project/client
     executor: node/default
     steps:
       - checkout
