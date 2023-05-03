@@ -11,6 +11,9 @@ jobs:
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
+      - run:
+          command: ls
+          name: list-directories
       - node/install-packages:
           pkg-manager: npm
           cache-path: node_modules
