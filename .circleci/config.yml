@@ -11,7 +11,7 @@ jobs:
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
-      - run
+      - run:
           command: pwd
           name: working-directory
       - run:
