@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   test-client:
+    working_directory: ~/client
     executor: node/default
     steps:
       - checkout
@@ -13,7 +14,6 @@ jobs:
           name: Client Testing Initiation
       - node/install-packages:
           pkg-manager: npm
-          #app-dir: ~
           cache-path: node_modules
           override-ci-command: npm i
       - run: 
