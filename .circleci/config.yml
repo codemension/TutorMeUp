@@ -19,11 +19,11 @@ jobs:
       - run:
           command: ls -al
           name: list-directories
-      #- node/install-packages:
-      #    app-dir: ~/client
-      #    pkg-manager: npm
-      #    cache-path: node_modules
-      #    override-ci-command: npm i
+      - node/install-packages:
+          #app-dir: ~/client
+          pkg-manager: npm
+          cache-path: node_modules
+          override-ci-command: npm i
       #- run:
       #    command: ls
       #    name: list-directories
