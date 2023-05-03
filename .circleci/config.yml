@@ -27,7 +27,7 @@ jobs:
       - node/install-packages
       - run: echo "test-server"
       - run: cd server
-      - run: npm test
+      - run: npm run test
       - store_test_results:
           path: test-results
 
