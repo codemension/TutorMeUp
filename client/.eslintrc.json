@@ -5,8 +5,8 @@
 	},
 	"extends": [
 		"plugin:react/recommended",
-		"plugin:jest/recommended", 
-		"airbnb", 
+		"plugin:jest/recommended",
+		"airbnb",
 		"prettier"
 	],
 	"parserOptions": {
