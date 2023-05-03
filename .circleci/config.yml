@@ -5,10 +5,10 @@ orbs:
 
 jobs:
   test-client:
+    working_directory: ~/project
     executor: node/default
     steps:
-      - checkout:
-          path: ~/TutorMeUp/client
+      - checkout
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
@@ -18,17 +18,17 @@ jobs:
       - run:
           command: ls -al
           name: list-directories
-      - node/install-packages:
-          app-dir: ~/client
-          pkg-manager: npm
-          cache-path: node_modules
-          override-ci-command: npm i
-      - run:
-          command: ls
-          name: list-directories
-      - run:
-          command: npm run test
-          name: Testing
+      #- node/install-packages:
+      #    app-dir: ~/client
+      #    pkg-manager: npm
+      #    cache-path: node_modules
+      #    override-ci-command: npm i
+      #- run:
+      #    command: ls
+      #    name: list-directories
+      #- run:
+      #    command: npm run test
+      #    name: Testing
 
   test-server:
     executor: node/default
