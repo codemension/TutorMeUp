@@ -16,8 +16,8 @@ jobs:
           pkg-manager: npm
           cache-path: node_modules
           override-ci-command: npm i
-      - run: 
-          command: npm test
+      - run:
+          command: npm run test
           name: Testing
 
   test-server:
