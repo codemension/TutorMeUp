@@ -30,5 +30,7 @@ workflows:
   test:
     jobs:
       - test-client
+          version: '16.10'
+          pkg-manager: npm
   
 
