@@ -11,8 +11,11 @@ jobs:
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
+      - run
+          command: pwd
+          name: working-directory
       - run:
-          command: ls
+          command: ls -al
           name: list-directories
       - node/install-packages:
           app-dir: ~/client
