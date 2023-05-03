@@ -1,0 +1,34 @@
+version: 2.1
+
+orbs:
+  node: 5.1.0
+
+jobs:
+  test-client:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run: echo "test-client"
+      - run: cd client
+      - run: npm test
+      - store_test_results:
+          path: test-results
+  test-server:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run: echo "test-server"
+      - run: cd server
+      - run: npm test
+      - store_test_results:
+          path: test-results
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-client
+  
+
