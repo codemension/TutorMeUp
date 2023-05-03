@@ -7,15 +7,16 @@
 		"start": "snowpack dev",
 		"dev": "snowpack dev",
 		"build": "snowpack build",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
+		"coverage": "jest --coverage",
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write"
 	},
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run format"
-    }
-  },
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint && npm run format"
+		}
+	},
 	"keywords": [
 		"tutormeup",
 		"tutor",
@@ -30,11 +31,21 @@
 	"author": "Codemension",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/cli": "^7.21.5",
+		"@babel/core": "^7.21.8",
+		"@babel/preset-env": "^7.21.5",
+		"@babel/preset-react": "^7.18.6",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"babel-loader": "^9.1.2",
 		"eslint": "^8.39.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-jest": "^27.2.1",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.32.2",
+		"jest": "^29.5.0",
+		"jest-environment-jsdom": "^29.5.0",
 		"prettier": "2.8.8",
 		"snowpack": "^3.8.8"
 	},
