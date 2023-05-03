@@ -5,11 +5,11 @@ orbs:
 
 jobs:
   test-client:
-    working_directory: ~/project
+    working_directory: ~/project/client
     executor: node/default
     steps:
       - checkout:
-          path: ~/project/client
+          path: ~/project
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
