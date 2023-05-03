@@ -13,7 +13,9 @@ jobs:
           name: Client Testing Initiation
       - node/install-packages:
           pkg-manager: npm
-          app-dir: ./client
+          #app-dir: ~
+          cache-path: node_modules
+          override-ci-command: npm i
       - run: 
           command: npm test
           name: Testing
