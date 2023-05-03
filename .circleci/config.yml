@@ -15,6 +15,7 @@ jobs:
           command: ls
           name: list-directories
       - node/install-packages:
+          app-dir: ~/client
           pkg-manager: npm
           cache-path: node_modules
           override-ci-command: npm i
@@ -22,7 +23,7 @@ jobs:
           command: ls
           name: list-directories
       - run:
-          command: cd client && npm run test
+          command: npm run test
           name: Testing
 
   test-server:
