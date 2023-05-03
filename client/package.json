@@ -1,33 +1,48 @@
 {
-  "name": "tutormeup-client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"name": "tutormeup-client",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "snowpack dev",
+		"dev": "snowpack dev",
+		"build": "snowpack build",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint . --fix --max-warnings=0",
+		"format": "prettier . --write"
+	},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format"
+    }
   },
-  "keywords": [
-    "tutormeup",
-    "tutor",
-    "tutoring",
-    "tutoring app",
-    "tutoring website",
-    "tutoring platform",
-    "tutoring service",
-    "tutoring services",
-    "tutoring website"
-  ],
-  "author": "Codemension",
-  "license": "ISC",
-  "devDependencies": {
-    "snowpack": "^3.8.8"
-  },
-  "dependencies": {
-    "@snowpack/plugin-dotenv": "^2.2.0",
-    "@snowpack/plugin-react-refresh": "^2.5.0",
-    "react": "^18.2.0",
-    "react-router-dom": "^6.11.0"
-  }
+	"keywords": [
+		"tutormeup",
+		"tutor",
+		"tutoring",
+		"tutoring app",
+		"tutoring website",
+		"tutoring platform",
+		"tutoring service",
+		"tutoring services",
+		"tutoring website"
+	],
+	"author": "Codemension",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.39.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.2",
+		"prettier": "2.8.8",
+		"snowpack": "^3.8.8"
+	},
+	"dependencies": {
+		"@snowpack/plugin-dotenv": "^2.2.0",
+		"@snowpack/plugin-react-refresh": "^2.5.0",
+		"husky": "^8.0.3",
+		"react": "^18.2.0",
+		"react-router-dom": "^6.11.0"
+	}
 }
