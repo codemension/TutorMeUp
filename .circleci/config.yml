@@ -1,19 +1,25 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.1.0
+  node: circleci/node@5.0.2
 
 jobs:
   test-client:
     executor: node/default
     steps:
       - checkout
-      - node/install-packages
-      - run: echo "test-client"
-      - run: cd client
-      - run: npm test
-      - store_test_results:
-          path: test-results
+      - run:
+          command: echo "test-client"
+          name: Client Testing Initiation
+      - run: 
+          command: cd client
+          name: Change Directory
+      - node/install-packages:
+          pkg-manager: npm
+      - run: 
+          command: npm test
+          name: Testing
+
   test-server:
     executor: node/default
     steps:
@@ -30,7 +36,5 @@ workflows:
   test:
     jobs:
       - test-client
-          version: '16.10'
-          pkg-manager: npm
   
 
