@@ -8,7 +8,7 @@ jobs:
     executor: node/default
     steps:
       - checkout:
-          path: ~/client
+          path: ~/TutorMeUp/client
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
