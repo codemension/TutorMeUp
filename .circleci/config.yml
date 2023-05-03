@@ -5,7 +5,6 @@ orbs:
 
 jobs:
   test-client:
-    working_directory: /home/circleci/project/client
     executor: node/default
     steps:
       - checkout
