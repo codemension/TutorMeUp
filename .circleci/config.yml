@@ -3,6 +3,8 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 
+app-dir: client
+
 jobs:
   test-client:
     executor: node/default
@@ -11,9 +13,6 @@ jobs:
       - run:
           command: echo "test-client"
           name: Client Testing Initiation
-      - run: 
-          command: cd client
-          name: Change Directory
       - node/install-packages:
           pkg-manager: npm
       - run: 
