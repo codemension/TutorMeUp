@@ -16,7 +16,7 @@ jobs:
           name: Client Testing Initiation
       - node/install-packages:
           pkg-manager: npm
-          app-dir: ~/client
+          app-dir: /home/circleci/project/client
       - run: 
           command: npm test
           name: Testing
